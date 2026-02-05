@@ -213,10 +213,42 @@ main {
   background: #b4b6b9; /* un poco más claro que el resto */
 }
 
-
 .colorOfText {
-  color: black;
+    color: black;
 }
+
+.card-wsp {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-wsp:hover .card {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+/* ----- FLECHA DE WHATSAPP EN TARJETAS ----- */
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  color: green;
+  font-size: 22px;
+  opacity: 0;                 /* ← clave: oculta por defecto */
+  transform: translateX(-5px);/* ← parte desde un poquito atras */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Aparece SOLO cuando pasas el mouse por ESA tarjeta */
+.card-wsp:hover .arrow {
+  opacity: 1;
+  transform: translateX(6px);
+
 
 
 
