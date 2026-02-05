@@ -249,6 +249,35 @@ main {
   opacity: 1;
   transform: translateX(6px);
 
+/* ====== CORRECCION VISUAL EN MOVIL ====== */
+@media (max-width: 768px) {
+
+  .card-wsp {
+    width: 100%;
+  }
+
+  .card-wsp .card {
+    width: 100%;
+  }
+
+  /* Evita que el texto se vea azul o subrayado */
+  .card-wsp h3,
+  .card-wsp p {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Mantiene el formato de tarjeta en movil */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mantiene la flecha alineada correctamente */
+  .card-header {
+    width: 100%;
+  }
+}
+
 
 
 
