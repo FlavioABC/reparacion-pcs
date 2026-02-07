@@ -135,53 +135,76 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* WHATSAPP FLOTANTE */
-.whatsapp-float {
+/* ===== ICONOS FLOTANTES GRANDES + GLOW ===== */
+
+.social-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: black;
-  padding: 12px 15px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 15px rgba(37,211,102,0.7);
-  transition: transform 0.3s ease;
+  right: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99999;
+  pointer-events: auto;
+
+  transition: bottom 0.25s ease-in-out;
 }
 
-/* Instagram FLOTANTE */
-.instagram-float {
-  position: fixed;
-  bottom: 70px;
-  right: 20px;
-  background: #e22b4d;
-  color: black;
-  padding: 12px 15px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 15px rgba(226, 43, 77);
-  transition: transform 0.3s ease;
+
+/* AQUI AGRANDAS LOS ICONOS */
+.social-float img {
+  width: 62px;      /* tamaño principal */
+  height: 62px;
+  filter: drop-shadow(0 0 12px currentColor);
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-.facebook-float {
-  position: fixed;
-  bottom: 120px;
-  right: 20px;
-  background: #1877F2;
-  color: black;
-  padding: 12px 15px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 15px rgba(24, 119, 242);
-  transition: transform 0.3s ease;
+/* efecto al pasar el mouse */
+.social-float:hover img {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 16px currentColor);
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
+/* posiciones */
+.whatsapp {
+  bottom: 22px;
 }
+
+.instagram {
+  bottom: 82px;
+}
+
+.facebook {
+  bottom: 142px;
+}
+
+/* Forzamos el color base para que el glow funcione en TODOS */
+.whatsapp img {
+  color: #25D366;
+}
+
+.instagram img {
+  color: #e1306c;
+}
+
+.facebook img {
+  color: #1877F2;
+}
+
+/* Hacemos que el glow se vea siempre, no solo al hover */
+.social-float img {
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+/* Al pasar el mouse, el glow crece */
+.social-float:hover img {
+  filter: drop-shadow(0 0 16px currentColor);
+}
+
+
+
+
+
 
 /* FOOTER */
 footer {
@@ -262,42 +285,7 @@ main {
 .card-wsp:hover .arrow {
   opacity: 1;
   transform: translateX(6px);
-
-/* ====== CORRECCION VISUAL EN MOVIL ====== */
-@media (max-width: 768px) {
-
-  .card-wsp {
-    width: 100%;
-  }
-
-  .card-wsp .card {
-    width: 100%;
-  }
-
-  /* Evita que el texto se vea azul o subrayado */
-  .card-wsp h3,
-  .card-wsp p {
-    color: white;
-    text-decoration: none;
-  }
-
-  /* Mantiene el formato de tarjeta en movil */
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Mantiene la flecha alineada correctamente */
-  .card-header {
-    width: 100%;
-  }
 }
-
-
-
-
-
-
-
 
 
 
