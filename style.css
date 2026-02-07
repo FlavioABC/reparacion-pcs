@@ -144,17 +144,16 @@ button:hover {
   align-items: center;
   justify-content: center;
 
-  z-index: 99999;
+  z-index: 90000;
   pointer-events: auto;
 
   transition: bottom 0.25s ease-in-out;
 }
 
 
-/* AQUI AGRANDAS LOS ICONOS */
 .social-float img {
-  width: 62px;      /* tamaño principal */
-  height: 62px;
+  width: 42px;      
+  height: 42px;
   filter: drop-shadow(0 0 12px currentColor);
   transition: transform 0.25s ease, filter 0.25s ease;
 }
@@ -178,7 +177,6 @@ button:hover {
   bottom: 142px;
 }
 
-/* Forzamos el color base para que el glow funcione en TODOS */
 .whatsapp img {
   color: #25D366;
 }
@@ -191,12 +189,10 @@ button:hover {
   color: #1877F2;
 }
 
-/* Hacemos que el glow se vea siempre, no solo al hover */
 .social-float img {
   filter: drop-shadow(0 0 10px currentColor);
 }
 
-/* Al pasar el mouse, el glow crece */
 .social-float:hover img {
   filter: drop-shadow(0 0 16px currentColor);
 }
@@ -286,6 +282,7 @@ main {
   opacity: 1;
   transform: translateX(6px);
 }
+
 
 
 
